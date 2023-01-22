@@ -4,13 +4,19 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2023/01/22/hello-world/"/>
-    <url>/2023/01/22/hello-world/</url>
+    <title>大年初一 旧的开始</title>
+    <link href="/2023/01/22/My-New-Post/"/>
+    <url>/2023/01/22/My-New-Post/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>回想了一下去年的这个时候 刚刚大三上结束 整理完图形学最后的报告后开始捣鼓服务器<br>把自己暑假搞的卡牌对战后端和后来做的网页项目全部在服务器上搭了一遍 还到处找人去展示<br>结果一个星期之后新鲜感退却了之后服务器就基本没有维护了<br>直到开学了才发现同学们该刷题的早就刷了一个寒假 该准备的简历也早都准备好了<br>这才开始拼命刷题复习弄博客<br>之后是疫情封城 投简历 笔试面试 对自己找不到工作的无尽焦虑<br>最终还是靠着鱼总发了offer的人跑路（大概率）才正式领到了一份莉莉丝的offer<br>从暑假开始不断接触视频动捕 人体骨骼 动画重定向 再之后慢慢开始到diffusion和AIGC<br>一年下来才发现这份实习让我学习的东西实在宝贵 我也算是慢慢踏入了机器学习的门槛<br>来年接着好好准备毕设和最后的实习 9月份之后崭新入学 重新梳理一遍自己的所学知识<br>这里就先为之后的学习记录先做好铺垫了 之前整理过的文档也会慢慢更新在这里<br>希望明年依旧有所收获</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>日常</tag>
+      
+    </tags>
     
   </entry>
   
