@@ -16,12 +16,12 @@
   <meta name="author" content="Rakkan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="力扣2325:解密消息  给你字符串 key 和 message ，分别表示一个加密密钥和一段加密消息。解密 message 的步骤如下： 使用 key 中 26 个英文小写字母第一次出现的顺序作为替换表中的字母 顺序 。 将替换表与普通英文字母表对齐，形成对照表。 按照对照表 替换 message 中的每个字母。 空格 ’ ’ 保持不变。 例如，key &#x3D; “happy boy”（实际的加密密钥">
+    <meta name="description" content="力扣2325:解密消息  给你字符串 key 和 message ，分别表示一个加密密钥和一段加密消息。解密 message 的步骤如下： 使用 key 中 26 个英文小写字母第一次出现的顺序作为替换表中的字母 顺序 。 将替换表与普通英文字母表对齐，形成对照表。 按照对照表 替换 message 中的每个字母。 空格 &#39; &#39; 保持不变。 例如，key &#x3D; &quot;happy boy&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二月一日刷题打卡">
 <meta property="og:url" content="https://rakkanarakal.github.io/2023/02/01/02-01_leetcode/index.html">
 <meta property="og:site_name" content="我会放过你的弱小星球">
-<meta property="og:description" content="力扣2325:解密消息  给你字符串 key 和 message ，分别表示一个加密密钥和一段加密消息。解密 message 的步骤如下： 使用 key 中 26 个英文小写字母第一次出现的顺序作为替换表中的字母 顺序 。 将替换表与普通英文字母表对齐，形成对照表。 按照对照表 替换 message 中的每个字母。 空格 ’ ’ 保持不变。 例如，key &#x3D; “happy boy”（实际的加密密钥">
+<meta property="og:description" content="力扣2325:解密消息  给你字符串 key 和 message ，分别表示一个加密密钥和一段加密消息。解密 message 的步骤如下： 使用 key 中 26 个英文小写字母第一次出现的顺序作为替换表中的字母 顺序 。 将替换表与普通英文字母表对齐，形成对照表。 按照对照表 替换 message 中的每个字母。 空格 &#39; &#39; 保持不变。 例如，key &#x3D; &quot;happy boy&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-01T15:56:53.000Z">
 <meta property="article:modified_time" content="2023-02-24T11:55:02.303Z">
@@ -207,7 +207,7 @@
         
         
         
-          11 分钟
+          12 分钟
         
       </span>
     
@@ -250,19 +250,11 @@
             
               <div class="markdown-body">
                 
-                <h2 id="力扣2325-解密消息">力扣2325:解密消息</h2>
+                <h2 id="力扣2325解密消息">力扣2325:解密消息</h2>
 <blockquote>
 <p>给你字符串 key 和 message ，分别表示一个加密密钥和一段加密消息。解密 message 的步骤如下：</p>
-<p>使用 key 中 26 个英文小写字母第一次出现的顺序作为替换表中的字母 顺序 。<br>
-将替换表与普通英文字母表对齐，形成对照表。<br>
-按照对照表 替换 message 中的每个字母。<br>
-空格 ’ ’ 保持不变。<br>
-例如，key = “happy boy”（实际的加密密钥会包含字母表中每个字母 至少一次），据此，可以得到部分对照表（‘h’ -&gt; ‘a’、‘a’ -&gt; ‘b’、‘p’ -&gt; ‘c’、‘y’ -&gt; ‘d’、‘b’ -&gt; ‘e’、‘o’ -&gt; ‘f’）。<br>
-返回解密后的消息。</p>
-<p>输入：key = “the quick brown fox jumps over the lazy dog”, message = “vkbs bs t suepuv”<br>
-输出：“this is a secret”<br>
-解释：对照表如上图所示。<br>
-提取 “the quick brown fox jumps over the lazy dog” 中每个字母的首次出现可以得到替换表。</p>
+<p>使用 key 中 26 个英文小写字母第一次出现的顺序作为替换表中的字母 顺序 。 将替换表与普通英文字母表对齐，形成对照表。 按照对照表 替换 message 中的每个字母。 空格 ' ' 保持不变。 例如，key = &quot;happy boy&quot;（实际的加密密钥会包含字母表中每个字母 至少一次），据此，可以得到部分对照表（'h' -&gt; 'a'、'a' -&gt; 'b'、'p' -&gt; 'c'、'y' -&gt; 'd'、'b' -&gt; 'e'、'o' -&gt; 'f'）。 返回解密后的消息。</p>
+<p>输入：key = &quot;the quick brown fox jumps over the lazy dog&quot;, message = &quot;vkbs bs t suepuv&quot; 输出：&quot;this is a secret&quot; 解释：对照表如上图所示。 提取 &quot;the quick brown fox jumps over the lazy dog&quot; 中每个字母的首次出现可以得到替换表。</p>
 </blockquote>
 <p>今天的题目是一套简单题，不过很久没写代码了，原来想用vector简单解决，后面觉得还是map比较简单，从解答方式倒过来写了一下加入字典的方式，跑代码的时候修改了一下map的key属性，很快就出来了。</p>
 <p>第一次出来的答案不太对劲，对比了一下发现是空字符串没有加到字典导致字母错了一位，把这个问题修复了就得到答案了。</p>
