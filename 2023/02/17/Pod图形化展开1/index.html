@@ -19,17 +19,17 @@
     <meta name="description" content="背景 最近接触到Iscca gym,MuJoCo这类的物理引擎可以在linux中尝试实时渲染，但我们的镜像运行在云端kubernetes，没有可用的图形化界面，直接导出数据再渲染的方式会有一定的滞后性。如果既想使用我们性能强大的gpu进行运算，又想直观地看到实时反馈，唯一的解决办法就是打通Pod到本地的图形渲染管道。 X协议 Linux本身是没有图形化界面的，所谓的图形化界面系统只不过中 L">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pod图形化展开">
-<meta property="og:url" content="https://rakkanarakal.github.io/2023/02/17/Pod%E5%9B%BE%E5%BD%A2%E5%8C%96%E5%B1%95%E5%BC%80/index.html">
+<meta property="og:url" content="https://rakkanarakal.github.io/2023/02/17/Pod%E5%9B%BE%E5%BD%A2%E5%8C%96%E5%B1%95%E5%BC%801/index.html">
 <meta property="og:site_name" content="我会放过你的弱小星球">
 <meta property="og:description" content="背景 最近接触到Iscca gym,MuJoCo这类的物理引擎可以在linux中尝试实时渲染，但我们的镜像运行在云端kubernetes，没有可用的图形化界面，直接导出数据再渲染的方式会有一定的滞后性。如果既想使用我们性能强大的gpu进行运算，又想直观地看到实时反馈，唯一的解决办法就是打通Pod到本地的图形渲染管道。 X协议 Linux本身是没有图形化界面的，所谓的图形化界面系统只不过中 L">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://docimg2.docs.qq.com/image/AgAABTJcxKqVgUqgEpdPqZ3-HgoIau_v.png?w=161&h=162">
-<meta property="article:published_time" content="2023-02-17T09:25:54.000Z">
-<meta property="article:modified_time" content="2023-02-24T11:59:58.025Z">
+<meta property="og:image" content="https://rakkanarakal.github.io/img/pod_1.png">
+<meta property="article:published_time" content="2023-02-17T09:25:55.000Z">
+<meta property="article:modified_time" content="2023-04-12T14:46:50.968Z">
 <meta property="article:author" content="Rakkan">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://docimg2.docs.qq.com/image/AgAABTJcxKqVgUqgEpdPqZ3-HgoIau_v.png?w=161&h=162">
+<meta name="twitter:image" content="https://rakkanarakal.github.io/img/pod_1.png">
   
   
   
@@ -257,7 +257,7 @@
 <h2 id="x协议">X协议</h2>
 <p>Linux本身是没有图形化界面的，所谓的图形化界面系统只不过中 Linux 下的应用程序。这一点和 Windows 不一样。Windows 从 Windows 95 开始，图形界面就直接在系统内核中实现了，是操作系统不可或缺的一部分。Linux 的图形化界面，底层都是基于 X 协议。</p>
 <figure>
-<img src="https://docimg2.docs.qq.com/image/AgAABTJcxKq3I9uK7ExPKoxgjCS8rCdA.png?w=433&amp;h=184" srcset="/img/loading.gif" lazyload alt="img" /><figcaption>img</figcaption>
+<img src="/img/pod_1.png" srcset="/img/loading.gif" lazyload alt="img" /><figcaption>img</figcaption>
 </figure>
 <p>把X server和X client抽象成windows上的 主机 + 显示器 。</p>
 <p>我们看到的显示器+键鼠就是X client ，供我们交互。而Pod上的linux系统就是X server 。</p>
@@ -285,7 +285,7 @@
 <li><h2 id="如果x11-forwarding没有成功开启的话会显示-error-cant-open-display">如果X11 Forwarding没有成功开启的话，会显示 Error: Can't open display:</h2></li>
 <li>如果成功开启，会展示出一个时钟的页面
 <ul>
-<li><img src="https://docimg2.docs.qq.com/image/AgAABTJcxKqVgUqgEpdPqZ3-HgoIau_v.png?w=161&amp;h=162" srcset="/img/loading.gif" lazyload title="fig:" alt="img" /></li>
+<li><img src="/img/pod_2.png" srcset="/img/loading.gif" lazyload title="fig:" alt="img" /></li>
 </ul></li>
 </ul>
 <p>看到这个界面就大功告成了</p>
@@ -313,7 +313,7 @@
 <p>安装后打开VNC Viewer，输入localhost:{本地端口}后就能跑通了，不过注意此时的连接方式是相当于投屏的方式进行展示。具体需要展示的东西需要在远程绑定了前面虚拟出来的DISPLAY后才能在本地看见。例如新建一个终端后输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Bash"><span class="hljs-comment">#设置DISPLAY,注意引号内的编号为之前xvfb所设置的编号</span><br><span class="hljs-built_in">export</span> DISPLAY=<span class="hljs-string">&quot;:1&quot;</span><br>xclock<br></code></pre></td></tr></table></figure>
 <figure>
-<img src="https://docimg2.docs.qq.com/image/AgAABTJcxKo_rsovngFOLpJCNA_yycoA.png?w=960&amp;h=568" srcset="/img/loading.gif" lazyload alt="img" /><figcaption>img</figcaption>
+<img src="/img/pod_3.png" srcset="/img/loading.gif" lazyload alt="img" /><figcaption>img</figcaption>
 </figure>
 <p>可以看到本地的Viewver已经成功显示出所连接的远程桌面了，自此成功打通Pod上的图形展开。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Bash">apt-get install build-essential freeglut3 freeglut3-dev binutils-gold<br></code></pre></td></tr></table></figure>
@@ -347,7 +347,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Pod图形化展开</div>
-      <div>https://rakkanarakal.github.io/2023/02/17/Pod图形化展开/</div>
+      <div>https://rakkanarakal.github.io/2023/02/17/Pod图形化展开1/</div>
     </div>
     <div class="license-meta">
       
